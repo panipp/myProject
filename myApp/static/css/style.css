@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+#header {
+  background-color: rgb(219, 68, 55);
+  height: 200px;
+}
+
+#content {
+  background-color: white;
+  width: 850px;
+  margin: auto;
+  height: 800px;
+  margin-top: -100px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+#content-line {
+  background-color: rgb(255, 138, 128);
+  height: 8px;
+}
+
+#main-content {
+  padding: 34px 17px;
+}
+
+.side-menu {    
+        position: fixed;
+        text-align:center;
+        top: 200px;
+        left: 80%;
+        width: 40px;
+        height: auto;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px #aaaaaa;
+}
+    
+.add-question {
+        cursor: pointer;
+}    
+    
+body {
+  margin: 0px;
+  background-color: rgb(251, 233, 231);
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
