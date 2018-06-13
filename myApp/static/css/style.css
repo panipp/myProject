@@ -26,10 +26,11 @@
 
 .side-menu {    
         position: fixed;
+        padding: 2px;
         text-align:center;
         top: 200px;
         left: 80%;
-        width: 40px;
+        width: 43px;
         height: auto;
         background-color: white;
         box-shadow: 1px 1px 1px 1px #aaaaaa;
