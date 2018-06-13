@@ -20,6 +20,7 @@
 }
 
 #main-content {
+  position: relative;
   padding: 34px 17px;
 }
 
@@ -36,11 +37,37 @@
     
 .add-question {
         cursor: pointer;
-}    
-    
+}
+
 body {
   margin: 0px;
   background-color: rgb(251, 233, 231);
-  font-family: Roboto,Helvetica,Arial,sans-serif;
+	font-family: Ubuntu-Regular, sans-serif;
 }
 
+form {
+  padding: 15px;
+  font-size: inherit;
+}
+
+input {
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 35px;
+  outline: none;
+}
+
+input[type="topic"]{
+  display: block;
+  border: none;
+  border-bottom: 2px solid rgb(255, 138, 128);
+  width: 100%;
+}
+
+input[type="text"]{
+  font-size: 15px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid rgb(255, 138, 128);
+  width: 100%;
+}

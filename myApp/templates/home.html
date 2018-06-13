@@ -1,12 +1,4 @@
 {% load static %}
-
-
-<!-- <div>
-        hello
-</div> 
-<div>
-    ไอซ์
-</div> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,17 +17,25 @@
 
 <body>
         <div id="header"></div>
+        
         <div class="side-menu">
-                <h3 class="add-question" data-toggle="tooltip" data-placement="right" title="Add a question">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                </h3>
-    
-                <h3 data-toggle="tooltip" data-placement="right" title="Submit your Form" class="submit-question" style="cursor: pointer;">
-                    <span class="glyphicon glyphicon-play-circle"></span>
-                </h3>
-            </div>
+            <h3 class="add-question" data-toggle="tooltip" data-placement="right" title="Add a question">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+            </h3>
+
+            <h3 data-toggle="tooltip" data-placement="right" title="Submit your Form" class="submit-question" style="cursor: pointer;">
+                <span class="glyphicon glyphicon-ok"></span>
+             </h3>
+        </div>
+
         <div id="content">
             <div id="content-line"></div>
+            <form>
+                <input name="topic" type="topic" placeholder="หัวข้อ">
+                <input name="description" type="text" placeholder="คำอธิบาย">
+
+            </form>
+            
         </div>
           
     <script  src={% static 'js/main.js' %}></script>
