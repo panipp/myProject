@@ -16,7 +16,12 @@
 </head>
 
 <body>
-        <div id="header"></div>
+        <div id="header">
+           <div class="logo">
+                <img src="{% static 'images/logo.png' %}" width="180" height="180" />
+            </div>  
+        </div>
+        
         
         <div class="side-menu">
             <div class="dropdown">
@@ -24,9 +29,9 @@
                     <span class="glyphicon glyphicon-plus-sign"></span>                
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="cursor: pointer;">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">สเกล</a></li>
+                    <li role="presentation1" onclick="presentation1()"><a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a></li>
+                    <li role="presentation2" onclick="presentation2()"><a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a></li>
+                    <li role="presentation3" onclick="presentation3()"><a role="menuitem" tabindex="-1" href="#">สเกล</a></li>
                 </ul>
             </div>
 
@@ -42,6 +47,26 @@
                 <input name="description" type="text" placeholder="คำอธิบาย">
 
             </form>
+
+          <p id="demo"></p>
+          <p>Hello Test</p>
+
+          <script>
+
+              
+            function presentation1(){
+                document.getElementById("demo").innerHTML = "คำตอบสั้น";
+                
+            }
+            function presentation2(){
+                
+                document.getElementById("demo").innerHTML = "คำตอบยาว";
+            }
+            function presentation3(){
+                document.getElementById("demo").innerHTML = "สเกล";
+            }
+            </script>
+
             
         </div>
           

@@ -5,6 +5,17 @@
   height: 200px;
 }
 
+logo{
+  padding: 0;
+  display: block;
+  margin: 0 auto auto 0;
+
+  height: 100px;
+  width: 100px;
+  max-height: 100px;
+  max-width: 100px;
+}
+
 #content {
   background-color: white;
   width: 850px;
@@ -71,4 +82,10 @@ input[type="text"]{
   border: none;
   border-bottom: 2px solid rgb(255, 138, 128);
   width: 100%;
+}
+
+questionshot {
+  margin: 0px;
+  background-color: rgb(255, 0, 0);
+	font-family: Ubuntu-Regular, sans-serif;
 }

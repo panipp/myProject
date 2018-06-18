@@ -11,3 +11,5 @@ class CreatePersonView(CreateView):
 	template_name='person.html'
 	form_class = PersonForm
 	success_url = '/home'
+
+	

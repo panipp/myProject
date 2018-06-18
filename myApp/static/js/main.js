@@ -345,3 +345,32 @@ $(document).ready(function () {
 
 	});
 });
+
+
+Survey
+    .StylesManager
+    .applyTheme("default");
+
+var json = {
+    questions: [
+        {
+            type: "rating",
+            name: "satisfaction",
+            title: "How satisfied are you with the Product?",
+            minRateDescription: "Not Satisfied",
+            maxRateDescription: "Completely satisfied"
+        }
+    ]
+};
+
+window.survey = new Survey.Model(json);
+
+survey
+    .onComplete
+    .add(function (result) {
+        document
+            .querySelector('#surveyResult')
+            .innerHTML = "result: " + JSON.stringify(result.data);
+    });
+
+$("#surveyElement").Survey({model: survey});
