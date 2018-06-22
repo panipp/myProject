@@ -47,23 +47,59 @@
                 <input name="description" type="text" placeholder="คำอธิบาย">
 
             </form>
-
-          <p id="demo"></p>
-          <p>Hello Test</p>
+ 
+          
+          
+        
+          <div id = "question_block">
+              <p id ="p1"> Test</p>
+          </div>
 
           <script>
 
-              
+            
+           
+            
             function presentation1(){
-                document.getElementById("demo").innerHTML = "คำตอบสั้น";
+                //อันนี้เป็นตัวเริ่มแรก
+                var question = document.createElement("shortq");
+
+                //แก้ให้เป็นช่องคำถามน่าจะตรงนี้ตอนนี้ทำได้แค่เพิ้มคำ
+                var node = document.createTextNode("เพิ่มหลังกด");
+
+                question.appendChild(node);
+
+
+                //question_block คือชื่อ div ที่เราทำคำถาม
+                var element = document.getElementById("question_block");
+                element.appendChild(question);
+
+                
+               
                 
             }
             function presentation2(){
                 
-                document.getElementById("demo").innerHTML = "คำตอบยาว";
+                var question = document.createElement("long");
+                
+                var node = document.createTextNode("เพิ่มยาว");
+
+                question.appendChild(node);
+                
+                var element = document.getElementById("question_block");
+                element.appendChild(question);
             }
+
+
             function presentation3(){
-                document.getElementById("demo").innerHTML = "สเกล";
+                var question = document.createElement("scale");
+                
+                var node = document.createTextNode("เพิ่มscale");
+
+                question.appendChild(node);
+                
+                var element = document.getElementById("question_block");
+                element.appendChild(question);
             }
             </script>
 
