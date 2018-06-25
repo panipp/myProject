@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,51 +9,47 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="header">
-        <div class="logo">
-            <img src="{% static 'images/logo.png' %}" width="180" height="180" />
+        <div id="header">
+           <div class="logo">
+                <img src="{% static 'images/logo.png' %}" width="180" height="180" />
+            </div>  
         </div>
-    </div>
+        
+        
+        <div class="side-menu">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-plus-sign"></span>                
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="cursor: pointer;">
+                    <li role="presentation1" onclick="presentation1()"><a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a></li>
+                    <li role="presentation2" onclick="presentation2()"><a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a></li>
+                    <li role="presentation3" onclick="presentation3()"><a role="menuitem" tabindex="-1" href="#">สเกล</a></li>
+                </ul>
+            </div>
 
-
-    <div class="side-menu">
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-plus-sign"></span>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-ok"></span>
             </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="cursor: pointer;">
-                <li role="presentation1" onclick="presentation1()">
-                    <a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a>
-                </li>
-                <li role="presentation2" onclick="presentation2()">
-                    <a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a>
-                </li>
-                <li role="presentation3" onclick="presentation3()">
-                    <a role="menuitem" tabindex="-1" href="#">สเกล</a>
-                </li>
-            </ul>
         </div>
 
-        <button type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-ok"></span>
-        </button>
-    </div>
+        <div id="content">
+            <div id="content-line"></div>
+            <form>
+                <input name="topic" type="topic" placeholder="หัวข้อ">
+                <input name="description" type="text" placeholder="คำอธิบาย">
 
-    <div id="content">
-        <div id="content-line"></div>
-        <form>
-            <input name="topic" type="topic" placeholder="หัวข้อ">
-            <input name="description" type="text" placeholder="คำอธิบาย">
-        </form>
-        <div id="question_block">
-            <p id="p1"> Test</p>
+            </form>        
+          
+        <div id = "question_block">
+            <p id ="p1"> Test</p>
 
             <!--คำตอบสั้น-->
 
@@ -64,7 +59,6 @@
                         <input name="questionS" type="text" placeholder="คำถาม">
                         <input name="ans" type="text" placeholder="คำตอบ">
                     </span>
-<<<<<<< HEAD
                              
             </form>
             
@@ -127,52 +121,25 @@
                 
                
                 
-=======
-                </div>
-
-            <!--คำตอบยาว-->
-                <div class="pp" id='new'>
-                    <span>
-                        <input name="questionS" type="text" placeholder="คำถาม">
-                        <textarea id="ans" placeholder="คำตอบ" style="height: 150px; width: 100%; border: none;
-                        border-bottom: 2px solid rgb(255, 138, 128); padding: 8px; resize: none"></textarea>
-                    </span>
-                </div>
-            </form>
-
-            <!--สเกล-->
-        </div>
-    </div>
-
-    <script src={% static 'js/main.js' %}></script>
-
-    <script>
-        function presentation1() {
-            //อันนี้เป็นตัวเริ่มแรก
-            var question = ' <div class="pp"><span><input name="questionS" type="text" placeholder="คำถาม"><input name="ans" type="text" placeholder="คำตอบ"></span></div>';
-            if (question != '') {
-                $("#new").after(question);
-                question = '';
-            } else {
-                $('#new').next().toggle();
->>>>>>> 6a03f978204655b4428061ff29d0960784b87f6c
             }
-        }
-        function presentation2() {
-            var question = '<div class="pp"><span><input name="questionS" type="text" placeholder="คำถาม"><textarea id="ans" placeholder="คำตอบ" style="height: 150px; width: 100%; border: none;border-bottom: 2px solid rgb(255, 138, 128); padding: 8px; resize: none"></textarea></span></div>';
-            if (question != '') {
-                $("#new").after(question);
-                question = '';
-            } else {
-                $('#new').next().toggle();
+            function presentation2(){
+                
+                var question = document.createElement("long");
+                
+                var node = document.createTextNode("เพิ่มยาว");
+
+                question.appendChild(node);
+                
+                var element = document.getElementById("question_block");
+                element.appendChild(question);
             }
-        }
 
 
-        function presentation3() {
-            var question = document.createElement("scale");
+            function presentation3(){
+                var question = document.createElement("scale");
+                
+                var node = document.createTextNode("เพิ่มscale");
 
-<<<<<<< HEAD
                 question.appendChild(node);
                 
                 var element = document.getElementById("question_block");
@@ -180,16 +147,5 @@
             }
         </script>
     <script  src={% static 'js/main.js' %}></script>
-=======
-            var node = document.createTextNode("เพิ่มscale");
-
-            question.appendChild(node);
-
-            var element = document.getElementById("question_block");
-            element.appendChild(question);
-        }
-    </script>
->>>>>>> 6a03f978204655b4428061ff29d0960784b87f6c
 </body>
-
 </html>
