@@ -20,7 +20,7 @@ logo{
   background-color: white;
   width: 850px;
   margin: auto;
-  height: 800px;
+  height: 100%;
   margin-top: -100px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
@@ -72,20 +72,15 @@ input {
 input[type="topic"]{
   display: block;
   border: none;
-  border-bottom: 2px solid rgb(255, 138, 128);
+  border-bottom: 1.5px solid rgb(255, 138, 128);
   width: 100%;
-}
-
-.pp{
-  padding: 15px;
-  width: 80%;
 }
 
 input[type="text"]{
   font-size: 15px;
   display: block;
   border: none;
-  border-bottom: 2px solid rgb(255, 138, 128);
+  border-bottom: 1.5px solid rgb(255, 138, 128);
   width: 100%;
 }
 
@@ -93,7 +88,7 @@ input[type="q1"]{
   font-size: 20px;
   display: block;
   border: none;
-  border-bottom: 2px solid rgb(255, 138, 128);
+  border-bottom: 1.5px solid rgb(255, 138, 128);
   width: 100%;
 }
 
@@ -101,7 +96,7 @@ input[type="a1"]{
   font-size: 15px;
   display: block;
   border: none;
-  border-bottom: 2px solid rgb(255, 138, 128);
+  border-bottom: 1.5px solid rgb(255, 138, 128);
   width: 100%;
 }
 

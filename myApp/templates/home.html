@@ -54,29 +54,48 @@
             <!--คำตอบสั้น-->
 
             <form>
-                <div class="pp">
+                
                     <span>
                         <input name="questionS" type="text" placeholder="คำถาม">
                         <input name="ans" type="text" placeholder="คำตอบ">
                     </span>
-                </div>                
+                             
             </form>
             
             
             <!--คำตอบยาว-->
             <form>
-                    <div class="pp">
-                        <span>
+                <span>
                             <input name="questionS" type="text" placeholder="คำถาม">
                             <textarea id="ans" placeholder="คำตอบ" style="height: 150px; width: 100%; border: none;
-                            border-bottom: 2px solid rgb(255, 138, 128); padding: 8px; resize: none"></textarea>
+                            border-bottom: 1.5px solid rgb(255, 138, 128); padding: 8px; resize: none"></textarea>
                         </span>
-                    </div>                
+
             </form>
 
             <!--สเกล-->
- 
-      
+            <form>
+                <input name="questionS" type="text" placeholder="คำถาม">
+                    <select style="margin-top: 15px"> 
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                    </select>
+                    ถึง
+                    <select>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option valuex="5" selected>5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                   <input name="des1" type="text" placeholder="ป้ายกำกับตัวเลือกต่ำสุด">
+                   <input name="des2" type="text" placeholder="ป้ายกำกับตัวเลือกสูงสุด">
+            </form>
+            
           </div>
 
           <script>
@@ -126,11 +145,7 @@
                 var element = document.getElementById("question_block");
                 element.appendChild(question);
             }
-            </script>
-
-            
-        </div>
-          
+        </script>
     <script  src={% static 'js/main.js' %}></script>
 </body>
 </html>
