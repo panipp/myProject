@@ -19,7 +19,7 @@
 <body>
     <div id="header">
         <div class="logo">
-            <img src="{% static 'images/logo.png' %}" width="180" height="180" />
+            <img src="{% static 'images/logo.png' %}"/>
         </div>
     </div>
 
@@ -56,7 +56,6 @@
         </form>
 
         <div id="question_block">
-            <p id="p1"> Test</p>
 
             <!--คำตอบสั้น-->
 
@@ -75,7 +74,7 @@
                     <input name="questionS" type="text" placeholder="คำถาม">\
                     <input name="ans" type="text" placeholder="คำตอบ">\
                 </span>\
-                <input type="button" value="remove" onclick="removeRow(this)">';
+                <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
             document.getElementById('questionform').appendChild(div);
         }
         function presentation2() {
@@ -83,10 +82,9 @@
             div.innerHTML =
                 '<span>\
                     <input name="questionS" type="text" placeholder="คำถาม">\
-                    <textarea id="ans" placeholder="คำตอบ" style="height: 150px; width: 100%; border: none;\
-                    border-bottom: 1.5px solid rgb(255, 138, 128); padding: 8px; resize: none"></textarea>\
+                    <textarea id="ans" placeholder="คำตอบ"></textarea>\
                 </span>\
-                <input type="button" value="remove" onclick="removeRow(this)">';
+                <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
             document.getElementById('questionform').appendChild(div);
         }
         function presentation3() {
@@ -111,7 +109,7 @@
                 </select>\
                 <input name="des1" type="text" placeholder="ป้ายกำกับตัวเลือกต่ำสุด">\
                 <input name="des2" type="text" placeholder="ป้ายกำกับตัวเลือกสูงสุด">\
-                <input type="button" value="remove" onclick="removeRow(this)">';
+                <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
             document.getElementById('questionform').appendChild(div);
         }
         function removeRow(input) {
