@@ -1,22 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/css?family=Kanit');
 
 html{
   font-size: 62.5%;
 }
 
 #header {
-  background-color: rgb(219, 68, 55);
+  background-color: rgb(252, 199, 55);
   height: 200px;
 }
-
-img {
-  position: fixed;
-  padding: 15px;
+img{
   max-width: 100%;
-  min-width: 20%;
-  width: 12%;
+  min-width: 13%;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  padding: 0.5%;
+  width: 13%;
+  margin:0 1% 0 1%;
   height: auto !important;
-  }
+  overflow: hidden;
+}
 
 #content {
   background-color: white;
@@ -30,7 +36,7 @@ img {
 }
 
 #content-line {
-  background-color: rgb(255, 138, 128);
+  background-color: rgb(255, 223, 116);
   height: 5px;
 }
 
@@ -45,7 +51,7 @@ img {
         text-align:center;
         top: 200px;
         right: 80px;
-        width: 43px;
+        width: auto;
         height: auto;
         background-color: white;
         box-shadow: 1px 1px 1px 1px #aaaaaa;
@@ -57,8 +63,8 @@ img {
 
 body {
   margin: 0px;
-  background-color: rgb(251, 233, 231);
-	font-family: Ubuntu-Regular, sans-serif;
+  background-color: rgb(255, 252, 206);
+	font-family: 'Kanit', sans-serif;
 }
 
 form {
@@ -82,7 +88,7 @@ input[type="topic"]{
 }
 
 input:focus{
-  border-bottom: 1.5px solid rgb(255, 138, 128);
+  border-bottom: 1.5px solid rgb(255, 223, 116);
 
 }
 
@@ -106,5 +112,41 @@ textarea:focus {
 questionshot {
   margin: 0px;
   background-color: rgb(255, 0, 0);
-	font-family: Ubuntu-Regular, sans-serif;
+	font-family: 'Kanit', sans-serif;
+}
+.btn{
+  align-content: center;
+  background: transparent;
+  outline: none !important;
+}
+.btn:focus { 
+  outline: none !important; 
+}
+
+.banner{
+  position: relative;
+  padding: 1%;
+  text-align: justify;
+  font-size: 300%;
+  height: auto;
+  letter-spacing: 5pt;
+  color: rgb(240, 3, 3);
+}
+
+select{
+  background: #fff;
+    color:#555;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 35px 6px 12px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position:relative;
+    min-width: 160px;
+    outline-color: rgb(255, 223, 116);
 }
