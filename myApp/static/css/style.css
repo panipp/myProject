@@ -127,7 +127,7 @@ questionshot {
   position: relative;
   padding: 1%;
   text-align: justify;
-  font-size: 300%;
+  font-size: 0.1em;
   height: auto;
   letter-spacing: 5pt;
   color: rgb(240, 3, 3);

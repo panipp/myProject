@@ -16,4 +16,6 @@ class CreatePersonView(CreateView):
 	form_class = PersonForm
 	success_url = '/home'
 
+def feedback(request):
+	return render(request,'feedback.html')
 	
