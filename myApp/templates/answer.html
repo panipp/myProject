@@ -23,9 +23,39 @@
         <div id="header">
             <img class="logo" src="{% static 'images/logo.png' %}"/>
         </div>
+        
+    <div class="side-menu">
+        <div class="dropdown">
+            <button class="btn" title="Add a question" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                <i class="fa fa-plus-circle " aria-hidden="true" style="font-size: 25px;"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1" style="cursor: pointer;">
+                <li role="presentation1" onclick="presentation1()">
+                    <a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a>
+                </li>
+                <li role="presentation2" onclick="presentation2()">
+                    <a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a>
+                </li>
+                <li role="presentation3" onclick="presentation3()">
+                    <a role="menuitem" tabindex="-1" href="#">สเกล</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <button type="button" class="btn" title="Submit">
+            <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 25px;"></i>
+        </button>
+        </div>
+        <div>
+            <button type="button" class="btn" title="Feedback">
+                <i class="fa fa-arrow-circle-down " aria-hidden="true" style="font-size: 25px;"></i>
+        </button>
+        </div>
+    </div>
 
     <div id="content">
         <div id="content-line"></div>
+<<<<<<< HEAD
         <div class="contain">
             <input name="topic" class="ques-topic" type="text" placeholder="ชื่อแบบฟอร์ม" disabled>
             <input name="description" type="text" placeholder="คำอธิบาย" disabled>
@@ -52,10 +82,72 @@
             </div>
             
             
+=======
+        <form>
+            <input name="topic" type="topic" placeholder="หัวข้อ">
+            <input name="description" type="text" placeholder="คำอธิบาย">
+>>>>>>> 74890f4775515696f5d436aba6fe75d60cb9f497
 
             <input class="btn btn-default" type="button" value="submit" style="padding: 8px; margin-top: 10px;">
         </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <script>
+        function presentation1() {
+            var div = document.createElement('div');
+            div.innerHTML =
+                ' <span>\
+                    <input name="questionS" type="text" placeholder="คำถาม">\
+                    <div style="padding: 8px; margin-top: 10px; border-bottom: 1px dotted rgb(196, 196, 196);">\
+                    <font color="#777777">คำตอบแบบข้อความสั้น</font></div>\
+                </span>\
+                <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
+            document.getElementById('questionform').appendChild(div);
+        }
+        function presentation2() {
+            var div = document.createElement('div');
+            div.innerHTML =
+                '<span>\
+                    <input name="questionS" type="text" placeholder="คำถาม">\
+                    <div style="padding: 8px; margin-top: 10px; border-bottom: 1px dotted rgb(196, 196, 196);">\
+                    <font color="#777777">คำตอบแบบข้อความยาว</font></div>\
+                </span>\
+                <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
+            document.getElementById('questionform').appendChild(div);
+        }
+        function presentation3() {
+            var div = document.createElement('div');
+            div.innerHTML =
+                '<input name="questionS" type="text" placeholder="คำถาม">\
+                <div style="padding-top:15px;">\
+                <select>\
+                    <option value="0">0</option>\
+                    <option value="1" selected>1</option>\
+                </select>\
+                <span style="margin:15px;">ถึง</span>\
+                <select>\
+                    <option value="2">2</option>\
+                    <option value="3">3</option>\
+                    <option value="4">4</option>\
+                    <option valuex="5" selected>5</option>\
+                    <option value="6">6</option>\
+                    <option value="7">7</option>\
+                    <option value="8">8</option>\
+                    <option value="9">9</option>\
+                    <option value="10">10</option>\
+                </select>\
+                </div>\
+                <input name="des1" type="text" placeholder="ป้ายกำกับตัวเลือกต่ำสุด">\
+                <input name="des2" type="text" placeholder="ป้ายกำกับตัวเลือกสูงสุด">\
+                <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
+            document.getElementById('questionform').appendChild(div);
+        }
+        function removeRow(input) {
+            document.getElementById('questionform').removeChild(input.parentNode);
+        }
+    </script>
+>>>>>>> 74890f4775515696f5d436aba6fe75d60cb9f497
     <script src={% static 'js/main.js' %}></script>
 </body>

@@ -152,6 +152,19 @@ questionshot {
   outline: none !important; 
 }
 
+<<<<<<< HEAD
+=======
+.banner{
+  position: relative;
+  padding: 1%;
+  text-align: justify;
+  font-size: 0.1em;
+  height: auto;
+  letter-spacing: 5pt;
+  color: rgb(240, 3, 3);
+}
+
+>>>>>>> 74890f4775515696f5d436aba6fe75d60cb9f497
 select{
   background: #fff;
     color:#555;

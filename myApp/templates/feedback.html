@@ -21,18 +21,11 @@
 <body>
     
         <div id="header">
-<<<<<<< HEAD
-            <img class="logo" src="{% static 'images/logo.png' %}" />
-=======
             <img class="logo" src="{% static 'images/logo.png' %}"/>
             <div class="banner">
                 มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต
             </div>
-            <div>
-                <a href="{% url 'social:begin' 'tu' %}">Login with TU</a>
-            </div>
             
->>>>>>> 74890f4775515696f5d436aba6fe75d60cb9f497
         </div>
         
     <div class="side-menu">
@@ -67,7 +60,7 @@
     <div id="content">
         <div id="content-line"></div>
         <form>
-            <input name="topic" class="topic" type="text" placeholder="ชื่อแบบฟอร์ม">
+            <input name="topic" type="topic" placeholder="หัวข้อ">
             <input name="description" type="text" placeholder="คำอธิบาย">
 
         </form>
@@ -89,8 +82,8 @@
             div.innerHTML =
                 ' <span>\
                     <input name="questionS" type="text" placeholder="คำถาม">\
-                    <div style="padding: 8px; margin-top: 10px; padding-bottom: 0.5px; border-bottom: 1px dotted rgb(196, 196, 196);">\
-                    <font color="#9c9c9c">คำตอบแบบข้อความสั้น</font></div>\
+                    <div style="padding: 8px; margin-top: 10px; border-bottom: 1px dotted rgb(196, 196, 196);">\
+                    <font color="#777777">คำตอบแบบข้อความสั้น</font></div>\
                 </span>\
                 <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
             document.getElementById('questionform').appendChild(div);
@@ -100,8 +93,8 @@
             div.innerHTML =
                 '<span>\
                     <input name="questionS" type="text" placeholder="คำถาม">\
-                    <div style="padding: 8px; margin-top: 10px; padding-bottom: 0.5px; border-bottom: 1px dotted rgb(196, 196, 196);">\
-                    <font color="#9c9c9c">คำตอบแบบข้อความยาว</font></div>\
+                    <div style="padding: 8px; margin-top: 10px; border-bottom: 1px dotted rgb(196, 196, 196);">\
+                    <font color="#777777">คำตอบแบบข้อความยาว</font></div>\
                 </span>\
                 <input class="btn btn-default" type="button" value="remove" onclick="removeRow(this)">';
             document.getElementById('questionform').appendChild(div);
