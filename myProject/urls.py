@@ -24,4 +24,5 @@ urlpatterns = [
     path('person/', views.CreatePersonView.as_view(), name='person'),
     path('main/',views.main),
     path('oauth/', include('social_django.urls', namespace='social')), # in django2
+    path('feedback/',views.feedback)
 ]

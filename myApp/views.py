@@ -19,4 +19,7 @@ class CreatePersonView(CreateView):
 def main(request):
 	return render(request,'main.html')
 
+def feedback(request):
+	return render(request,'feedback.html')
+
 	
