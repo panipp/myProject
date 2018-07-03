@@ -15,7 +15,9 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Document</title>
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon2.ico">
+    <link rel="icon" href="{{ STATIC_URL }}images/favicon2.ico">
+    <title>Feedback</title>
 </head>
 
 <body>
@@ -27,8 +29,11 @@
 
     <div id="content">
         <div id="content-line"></div>
+        <input name="topic" class="ques-topic" type="text" placeholder="ชื่อแบบฟอร์ม" style="text-align: center;" disabled>
+        <div class="contain">
+            <input class="btn btn-default" type="button" value="ดาวน์โหลดการตอบกลับ" style="padding: 8px; margin-top: 10px;">
+        </div>
         
-
         
     </div>
 
