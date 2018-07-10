@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.home),
     path('answer/',views.answer),
-    path('person/', views.CreatePersonView.as_view(), name='person'),
+ 
     path('main/',views.main),
     path('oauth/', include('social_django.urls', namespace='social')), # in django2
     url(r'^favicon.ico$',
