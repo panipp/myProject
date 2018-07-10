@@ -25,7 +25,7 @@ urlpatterns = [
     path('home/',views.home),
     path('answer/',views.answer),
  
-    path('main/',views.main),
+    path('main/',views.main,name="main"),
     path('oauth/', include('social_django.urls', namespace='social')), # in django2
     url(r'^favicon.ico$',
         RedirectView.as_view( # the redirecting function
