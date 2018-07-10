@@ -90,7 +90,13 @@
                 <center><h4 class="modal-title">แบบฟอร์ม</h4></center>
               </div>
               <div class="modal-body">
-                   <center>  {% qr_from_text "http://google.com" size="s" image_format="png" error_correction="L" %}</center>
+                   <center>  
+                       {% qr_from_text "http://google.com" size="s" image_format="png" error_correction="L" %}
+                      
+                        <!-- ใส่URL เพิ่มทีหลัง -->
+                        <input type="url" value="URL" id="myInput">
+                        <button onclick="myFunction()">Copy</button>
+                   </center>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -154,6 +160,20 @@
         function removeRow(input) {
             document.getElementById('questionform').removeChild(input.parentNode);
         }
+
+        function myFunction() {
+                /* Get the text field */
+             var copyText = document.getElementById("myInput");
+
+                 /* Select the text field */
+                copyText.select();
+
+                 /* Copy the text inside the text field */
+                document.execCommand("copy");
+
+                 /* Alert the copied text */
+                alert("Copy URL : " + copyText.value);
+}
     </script>
     <script src={% static 'js/main.js' %}></script>
 </body>

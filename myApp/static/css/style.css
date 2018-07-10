@@ -102,6 +102,19 @@ input {
   background-color: transparent;
 }
 
+ีurl {
+  padding: 5px;
+  padding-bottom: 0.5px;
+  margin-top: 10px;
+  font-size:inherit;
+  outline: none;
+  width: 100%;
+  border: none;
+  display: block;
+  border-bottom: 0.5px solid rgb(196, 196, 196);
+  background-color: transparent;
+}
+
 .topic{
   font-size: 27px;
 }
