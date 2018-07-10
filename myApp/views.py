@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView
 from myApp.forms import PersonForm
 from myApp.models import Person
+
 def home(request):
     return render(request,'home.html')
 

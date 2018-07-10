@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'social_django',
     'tuauth',
+    'qr_code',
 ]
 
 AUTHENTICATION_BACKENDS = (

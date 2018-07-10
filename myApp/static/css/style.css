@@ -3,22 +3,37 @@
 
 #header {
   background-color: white;
-  height: 85px;
-}
-img{
-  max-width: 100%;
-  min-width: 13%;
-}
+  height: 100%;
 
-.logo {
-  float: left;
+}
+.logoimg{
+  max-width: 100%;
+  width: 40%;
   position: relative;
   padding: 0.5%;
   margin-left: 1.5%;
-  min-width: 50%;
-  height: inherit;
+  height: auto !important;
   overflow: hidden;
   
+}
+.logoimg2{
+  max-width: 5%;
+  width: 40%;
+  position: relative;
+  padding: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto !important;
+  overflow: hidden;
+  display: none;
+}
+@media (max-width: 850px) {
+  .logoimg{
+    display: none;
+  }
+  .logoimg2 {
+    display: block;
+  }
 }
 
 #content {
@@ -46,12 +61,12 @@ img{
         position: fixed;
         padding: 1px;
         text-align:center;
-        top: 85.2px;
+        top: auto;
         right: 0px;
         width: auto;
         height: auto;
         background-color: white;
-        box-shadow: 0.2px 0.2px 0.2px 0.2px #aaaaaa;
+        box-shadow: 0.2px 0.2px 0.2px 0px #aaaaaa;
 }
     
 .add-question {

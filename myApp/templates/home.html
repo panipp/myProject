@@ -24,41 +24,42 @@
 <body>
     
         <div id="header">
-            <img class="logo" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg2" src="{% static 'images/icon.png' %}" />
         </div>
-        
-    <div class="side-menu">
-        <div class="dropdown">
-            <button class="btn" title="Add a question" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                <i class="fa fa-plus-circle " aria-hidden="true" style="font-size: 25px;"></i>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1" style="cursor: pointer;">
-                <li role="presentation1" onclick="presentation1()">
-                    <a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a>
-                </li>
-                <li role="presentation2" onclick="presentation2()">
-                    <a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a>
-                </li>
-                <li role="presentation3" onclick="presentation3()">
-                    <a role="menuitem" tabindex="-1" href="#">คำตอบแบบสเกล</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <button type="button" class="btn" title="Submit">
-            <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 25px;"></i>
-        </button>
-        </div>
-        <div>
-        <a href="{% url 'feedback' %}" style="color: black">
-            <button type="button" class="btn" title="Feedback" href="{% url 'feedback' %}">
-                <i class="fa fa-arrow-circle-down " aria-hidden="true" style="font-size: 25px;"></i>
-        </button>
-        </a>
-        </div>
-    </div>
 
     <div id="content">
+            <div class="side-menu">
+                    <div class="dropdown">
+                        <button class="btn" title="Add a question" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <i class="fa fa-plus-circle " aria-hidden="true" style="font-size: 25px;"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1" style="cursor: pointer;">
+                            <li role="presentation1" onclick="presentation1()">
+                                <a role="menuitem" tabindex="-1" href="#">คำตอบสั้น</a>
+                            </li>
+                            <li role="presentation2" onclick="presentation2()">
+                                <a role="menuitem" tabindex="-1" href="#">คำตอบยาว</a>
+                            </li>
+                            <li role="presentation3" onclick="presentation3()">
+                                <a role="menuitem" tabindex="-1" href="#">คำตอบแบบสเกล</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button type="button" class="btn" title="Submit">
+                        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 25px;"></i>
+                    </button>
+                    </div>
+                    <div>
+                    <a href="{% url 'feedback' %}" style="color: black">
+                        <button type="button" class="btn" title="Feedback" href="{% url 'feedback' %}">
+                            <i class="fa fa-arrow-circle-down " aria-hidden="true" style="font-size: 25px;"></i>
+                    </button>
+                    </a>
+                    </div>
+                </div>
+
         <div id="content-line"></div>
         <form>
             <input name="topic" class="topic" type="text" placeholder="ชื่อแบบฟอร์ม">

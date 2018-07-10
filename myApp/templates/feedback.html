@@ -1,4 +1,5 @@
 {% load static %}
+{% load qr_code %}
 <!DOCTYPE html>
 <html lang="en"></html>
 
@@ -23,7 +24,8 @@
 <body>
     
         <div id="header">
-            <img class="logo" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg2" src="{% static 'images/icon.png' %}" />
         </div>
         
 
@@ -32,6 +34,7 @@
         <input name="topic" class="ques-topic" type="text" placeholder="ชื่อแบบฟอร์ม" style="text-align: center;" disabled>
         <div class="contain">
             <input class="btn btn-default" type="button" value="ดาวน์โหลดการตอบกลับ" style="padding: 8px; margin-top: 10px;">
+            {% qr_from_text "http://google.com" size="s" image_format="png" error_correction="L" %}
         </div>
         
         
