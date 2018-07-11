@@ -35,4 +35,5 @@ urlpatterns = [
         name="favicon" # name of our view
     ),
     path('feedback/',views.feedback,name="feedback"),
+    path('success/',views.success,name="success"),
 ]
