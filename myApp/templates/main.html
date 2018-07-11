@@ -34,12 +34,22 @@
     <div id="content">
         <div id="content-line"></div>
         <div class="contain">
-            <a href="{% url 'social:begin' 'tu' %}">Login with TU</a><br>
+            <!-- <a href="{% url 'social:begin' 'tu' %}">Login with TU</a><br> -->
+            <div>
+                <a href="{% url 'new' %}">
+                    <button class = "btn btn-default"><i class="material-icons">playlist_add</i> Create New Survey</button>
+                </a>
+            </div>
         </div>
-        loginแล้วจะแสดงแบบสำรวจทั้งหมดที่เคยสร้าง
+
+       
+        
         {% if user.is_authenticated %}
-            <h1>jjjj</h1>
+
+       
+
         {%endif%}
+
     </div>
 
     

@@ -199,3 +199,8 @@ select{
     outline-color: #ba0003;
 }
 
+button>.material-icons {
+  line-height: 0.2;
+  position:relative;
+  top:7px;
+}
