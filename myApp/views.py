@@ -23,4 +23,6 @@ def main(request):
 def feedback(request):
 	return render(request,'feedback.html')
 
+def success(request):
+	return render(request,'success.html')
 	

@@ -23,11 +23,8 @@
 <body>
     
         <div id="header">
-                <a href="{% url 'main' %}">
-
-                        <img class="logoimg" src="{% static 'images/logo.png' %}" />
-                        <img class="logoimg2" src="{% static 'images/icon.png' %}" />
-                </a>
+            <img class="logoimg" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg2" src="{% static 'images/icon.png' %}" />
         </div>
 
     <div id="content">
@@ -57,8 +54,9 @@
             </div>
             
             
-
+            <a href="{% url 'success' %}">
             <input class="btn btn-default" type="button" value="submit" style="padding: 8px; margin-top: 10px;">
+            </a>
         </div>
     </div>
 
