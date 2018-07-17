@@ -3,7 +3,7 @@
 
 #header {
   background-color: white;
-  height: 100%;
+  height: 120%;
 
 }
 .logoimg{
@@ -204,3 +204,4 @@ button>.material-icons {
   position:relative;
   top:7px;
 }
+

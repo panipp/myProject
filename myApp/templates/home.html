@@ -51,7 +51,7 @@
                         </ul>
                     </div>
                     <div>
-                        <button type="button" class="btn" title="Submit"  data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn" title="Submit"  >
                         <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 25px;"></i>
                     </button>
                     </div>
@@ -62,6 +62,14 @@
                     </button>
                     </a>
                     </div>
+
+
+                    <div>
+                            <button type="button" class="btn" title="Share"  data-toggle="modal" data-target="#myModal">
+                                    <i style="font-size:24px" class="fa">&#xf1e0;</i>
+                        </button>
+                        </div>
+
                 </div>
 
         <div id="content-line"></div>
@@ -97,8 +105,22 @@
                        {% qr_from_text "http://google.com" size="s" image_format="png" error_correction="L" %}
                       
                         <!-- ใส่URL เพิ่มทีหลัง -->
+<<<<<<< HEAD
                         <input type="url" value="URL" id="myInput">
                         <button class="btn btn-default" onclick="myFunction()">Copy</button>
+=======
+
+                        <input  type="text" value="URL" id="myInput">
+
+                        <button class="btn btn-default" onclick="myFunction()">Copy</button>
+                        
+                        <right><button class="btn btn-default">
+                            <a href="https://www.facebook.com/sharer/sharer.php?" target="_blank" rel="noopener">
+                            <i style="font-size:24px" class="fa">&#xf230;</i>
+                        
+                        </a>  </button></right>
+
+>>>>>>> 6efe7e0bfc8714f3cdadbc4683d19566c3b216b0
                    </center>
               </div>
               <div class="modal-footer">
