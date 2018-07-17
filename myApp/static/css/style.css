@@ -1,42 +1,54 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url('https://fonts.googleapis.com/css?family=Kanit');
 
-html{
-  font-size: 62.5%;
-}
-
 #header {
-  background-color: rgb(252, 199, 55);
-  height: 200px;
-}
-img{
-  max-width: 100%;
-  min-width: 13%;
-}
+  background-color: white;
+  height: 120%;
 
-.logo {
-  float: left;
+}
+.logoimg{
+  max-width: 100%;
+  width: 40%;
   position: relative;
   padding: 0.5%;
-  width: 13%;
-  margin:0 1% 0 1%;
+  margin-left: 6.6%;
   height: auto !important;
   overflow: hidden;
+  
+}
+.logoimg2{
+  max-width: 5%;
+  width: 40%;
+  position: relative;
+  padding: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto !important;
+  overflow: hidden;
+  display: none;
+}
+@media (max-width: 850px) {
+  .logoimg{
+    display: none;
+  }
+  .logoimg2 {
+    display: block;
+  }
 }
 
 #content {
   background-color: white;
-  width: 60%;
-  min-width: 50%;
+  width: 85%;
+  min-width: 60%;
   margin: auto;
   height: 100%;
   min-height: 800px;
-  margin-top: -100px;
+  margin-top: 0px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
 
 #content-line {
-  background-color: rgb(255, 223, 116);
+  background-color: #ba0003;
   height: 5px;
 }
 
@@ -47,14 +59,14 @@ img{
 
 .side-menu {    
         position: fixed;
-        padding: 2px;
+        padding: 1px;
         text-align:center;
-        top: 200px;
-        right: 80px;
+        top: auto;
+        right: 0px;
         width: auto;
         height: auto;
         background-color: white;
-        box-shadow: 1px 1px 1px 1px #aaaaaa;
+        box-shadow: 0.2px 0.2px 0.2px 0px #aaaaaa;
 }
     
 .add-question {
@@ -63,17 +75,23 @@ img{
 
 body {
   margin: 0px;
-  background-color: rgb(255, 252, 206);
+  background-color: #F1F1F3;
+  font-size: 15px;
 	font-family: 'Kanit', sans-serif;
 }
 
 form {
-  padding: 15px;
+  padding: 10px;
   font-size: inherit;
 }
 
+.contain{
+  padding: 10px;
+  font-size: inherit;
+}
 input {
   padding: 8px;
+  padding-bottom: 0.5px;
   margin-top: 10px;
   font-size:inherit;
   outline: none;
@@ -81,15 +99,55 @@ input {
   border: none;
   display: block;
   border-bottom: 0.5px solid rgb(196, 196, 196);
+  background-color: transparent;
 }
 
-input[type="topic"]{
-  font-size: 30px;
+ีurl {
+  padding: 5px;
+  padding-bottom: 0.5px;
+  margin-top: 10px;
+  font-size:inherit;
+  outline: none;
+  width: 100%;
+  border: none;
+  display: block;
+  border-bottom: 0.5px solid rgb(196, 196, 196);
+  background-color: transparent;
+}
+
+.topic{
+  font-size: 27px;
 }
 
 input:focus{
-  border-bottom: 1.5px solid rgb(255, 223, 116);
+  border-bottom: 1.5px solid #ba0003;
 
+}
+.btn-default{
+  padding: 8px;
+  margin-top: 10px;
+}
+input:disabled{
+  border: none;
+  padding-bottom: 0.5px;
+  margin-top: 7px;
+}
+
+.ques{
+  font-weight: bold;
+}
+
+.ques-topic{
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.answer{
+  margin-top: 25px;
+}
+
+.aa{
+  padding-bottom: 15px;
 }
 
 textarea {
@@ -100,12 +158,12 @@ textarea {
   height: 150px;
   outline: none;
   border: none;
-  border-bottom: 0.5px solid rgb(196, 196, 196);
+  border: 0.5px solid rgb(196, 196, 196);
   resize:none;
 }
 
 textarea:focus {
-  border-bottom: 1.5px solid rgb(255, 138, 128);
+  border-bottom: 1.5px solid #ba0003;
 
 }
 
@@ -123,16 +181,6 @@ questionshot {
   outline: none !important; 
 }
 
-.banner{
-  position: relative;
-  padding: 1%;
-  text-align: justify;
-  font-size: 300%;
-  height: auto;
-  letter-spacing: 5pt;
-  color: rgb(240, 3, 3);
-}
-
 select{
   background: #fff;
     color:#555;
@@ -148,5 +196,12 @@ select{
     white-space: nowrap;
     position:relative;
     min-width: 160px;
-    outline-color: rgb(255, 223, 116);
+    outline-color: #ba0003;
 }
+
+button>.material-icons {
+  line-height: 0.2;
+  position:relative;
+  top:7px;
+}
+

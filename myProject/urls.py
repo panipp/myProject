@@ -14,12 +14,26 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from myApp import views
+from django.conf.urls import url, include
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.home),
+    path('home/',views.home,name = "new"),
     path('answer/',views.answer),
-    path('person/', views.CreatePersonView.as_view(), name='person'),
+ 
+    path('main/',views.main,name="main"),
+    path('oauth/', include('social_django.urls', namespace='social')), # in django2
+    url(r'^favicon.ico$',
+        RedirectView.as_view( # the redirecting function
+            url=staticfiles_storage.url('images/favicon2.ico'), # converts the static directory + our favicon into a URL
+            # in my case, the result would be http://www.tumblingprogrammer.com/static/img/favicon.ico
+        ),
+        name="favicon" # name of our view
+    ),
+    path('feedback/',views.feedback,name="feedback"),
+    path('success/',views.success,name="success"),
 ]

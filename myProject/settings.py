@@ -27,7 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SOCIAL_AUTH_TU_KEY = 'P68OHzaepUyTXbwwFJQioYqV8Q4t9oB3kSlaBkiJ'
 
+SOCIAL_AUTH_TU_SECRET = 'B9E1l0uImAsNcqGtfCDrxLiI6NqsKQ4UP6gsmYK8D70QMaPtOPTZ0KQmywrJckfkY3yiCmfDxECMqLfyS8sYZMoNvQcSvS1dxHNSHRWXnaSIHy1xJMolJXnmPIQDnfNs'
+LOGIN_URL = '/oauth/login/tu/'
+LOGIN_REDIRECT_URL = '/main'
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +43,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myApp',
     'crispy_forms',
+    'social_django',
+    'tuauth',
+    'qr_code',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    
+    'django.contrib.auth.backends.ModelBackend',
+    'tuauth.backend.TUOAuth2',
+    
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -105,6 +119,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SOCIAL_AUTH_PIPELINE = [ 
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+    'social_core.pipeline.social_auth.associate_by_email',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

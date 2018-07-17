@@ -15,38 +15,50 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Document</title>
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon2.ico">
+    <link rel="icon" href="{{ STATIC_URL }}images/favicon2.ico">
+    <title>Answer</title>
 </head>
 
 <body>
     
         <div id="header">
-            <img class="logo" src="{% static 'images/logo.png' %}"/>
-            <div class="banner">
-                มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต
-            </div>
-            
+            <img class="logoimg" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg2" src="{% static 'images/icon.png' %}" />
         </div>
 
     <div id="content">
         <div id="content-line"></div>
-        <form>
-            <input name="topic" type="topic" placeholder="หัวข้อ" disabled>
+        <div class="contain">
+            <input name="topic" class="ques-topic" type="text" placeholder="ชื่อแบบฟอร์ม" disabled>
             <input name="description" type="text" placeholder="คำอธิบาย" disabled>
-
-        </form>
-
-        <div id="question_block">
-
-            <!--คำตอบสั้น-->
-
-            <form id="questionform">
-
-            </form>
-
+            <div class="answer">
+                <input type="text" class="ques" placeholder="คำถาม" disabled>
+                <div class="aa">
+                    <input type="text" placeholder="คำตอบแบบสั้น">
+                </div>                
+                <input type="text" class="ques" placeholder="คำถาม" disabled>
+                <div class="aa">
+                    <textarea placeholder="คำตอบแบบยาว"></textarea>
+                </div>
+                <input type="text" class="ques" placeholder="คำถาม" disabled>
+                <div class="aa">
+                    <label style="padding: 8px; font-weight: normal; color:#555;">คำอธิบาย1</label>
+                    <div class="btn-group" role="group" style="text-align:center" >
+                        <button class="btn btn-default" type="button">1</button>
+                        <button class="btn btn-default" type="button">2</button>
+                        <button class="btn btn-default" type="button">3</button>
+                    </div>
+                    <label style="padding: 8px; font-weight: normal; color:#555;">คำอธิบาย2</label>
+                </div>                  
+            </div>
+            
+            
+            <a href="{% url 'success' %}">
+            <input class="btn btn-default" type="button" value="submit" style="padding: 8px; margin-top: 10px;">
+            </a>
         </div>
     </div>
 
-    
     <script src={% static 'js/main.js' %}></script>
 </body>
