@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon2.ico">
+    <link rel="icon" href="{{ STATIC_URL }}images/favicon2.ico">
+    <title>Answer</title>
+</head>
+
+<body>
+    
+        <div id="header">
+            <img class="logoimg" src="{% static 'images/logo.png' %}" />
+            <img class="logoimg2" src="{% static 'images/icon.png' %}" />
+        </div>
+
+    <div id="content">
+        <div id="content-line"></div>
+        <div class="contain">
+            <input name="topic" class="ques-topic" type="text" placeholder="ชื่อแบบฟอร์ม" disabled>
+            <input name="description" type="text" placeholder="คำอธิบาย" disabled>
+            <div class="answer">
+                <input type="text" class="ques" placeholder="คำถาม" disabled>
+                <div class="aa">
+                    <input type="text" placeholder="คำตอบแบบสั้น">
+                </div>                
+                <input type="text" class="ques" placeholder="คำถาม" disabled>
+                <div class="aa">
+                    <textarea placeholder="คำตอบแบบยาว"></textarea>
+                </div>
+                <input type="text" class="ques" placeholder="คำถาม" disabled>
+                <div class="aa">
+                    <label style="padding: 8px; font-weight: normal; color:#555;">คำอธิบาย1</label>
+                    <div class="btn-group" role="group" style="text-align:center" >
+                        <button class="btn btn-default" type="button">1</button>
+                        <button class="btn btn-default" type="button">2</button>
+                        <button class="btn btn-default" type="button">3</button>
+                    </div>
+                    <label style="padding: 8px; font-weight: normal; color:#555;">คำอธิบาย2</label>
+                </div>                  
+            </div>
+            
+            
+            <a href="{% url 'success' %}">
+            <input class="btn btn-default" type="button" value="submit" style="padding: 8px; margin-top: 10px;">
+            </a>
+        </div>
+    </div>
+
+    <script src={% static 'js/main.js' %}></script>
+</body>
