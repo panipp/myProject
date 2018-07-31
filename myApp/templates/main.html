@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en"></html>
 
@@ -39,6 +40,9 @@
                 <a href="{% url 'new' %}">
                     <button class = "btn btn-default"><i class="material-icons">playlist_add</i> Create New Survey</button>
                 </a>
+                {% for survey in surveys %}
+                    <li><a href="{{ survey.get_absolute_url }}">{% trans "Take the Survey"%} {{survey.name}}</a></li>
+                {% endfor %}
             </div>
         </div>
 

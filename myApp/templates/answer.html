@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en"></html>
 
@@ -21,42 +23,26 @@
 </head>
 
 <body>
-    
+    <a href="{% url 'main' %}">
         <div id="header">
             <img class="logoimg" src="{% static 'images/logo.png' %}" />
             <img class="logoimg2" src="{% static 'images/icon.png' %}" />
         </div>
-
+    </a>
     <div id="content">
         <div id="content-line"></div>
         <div class="contain">
-            <input name="topic" class="ques-topic" type="text" placeholder="ชื่อแบบฟอร์ม" disabled>
-            <input name="description" type="text" placeholder="คำอธิบาย" disabled>
-            <div class="answer">
-                <input type="text" class="ques" placeholder="คำถาม" disabled>
-                <div class="aa">
-                    <input type="text" placeholder="คำตอบแบบสั้น">
-                </div>                
-                <input type="text" class="ques" placeholder="คำถาม" disabled>
-                <div class="aa">
-                    <textarea placeholder="คำตอบแบบยาว"></textarea>
-                </div>
-                <input type="text" class="ques" placeholder="คำถาม" disabled>
-                <div class="aa">
-                    <label style="padding: 8px; font-weight: normal; color:#555;">คำอธิบาย1</label>
-                    <div class="btn-group" role="group" style="text-align:center" >
-                        <button class="btn btn-default" type="button">1</button>
-                        <button class="btn btn-default" type="button">2</button>
-                        <button class="btn btn-default" type="button">3</button>
-                    </div>
-                    <label style="padding: 8px; font-weight: normal; color:#555;">คำอธิบาย2</label>
-                </div>                  
-            </div>
-            
-            
-            <a href="{% url 'success' %}">
-            <input class="btn btn-default" type="button" value="submit" style="padding: 8px; margin-top: 10px;">
-            </a>
+            <input name="topic" class="ques-topic" type="text" placeholder="{{survey.name}}" disabled>
+            <input name="description" type="text" placeholder="{{survey.description|safe}}" disabled>
+            <form action="{% url 'survey-detail' id=survey.id %}" method="post">
+                {% csrf_token %}
+                <span>
+                    {{ response_form }}
+                </span
+                <a href="myApp/templates/success.html">
+                <input class="btn btn-default" type="submit" value="submit" style="padding: 8px; margin-top: 10px;">
+                </a>
+            </form>
         </div>
     </div>
 

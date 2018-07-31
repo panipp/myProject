@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from myApp import views
+from myApp.views import SurveyView,SurveyDetail,ConfirmView
 from django.conf.urls import url, include
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
@@ -26,7 +27,7 @@ urlpatterns = [
     url(r"^$", views.home, name="home"),
     # url(r"submit_cre_survey/$", views.submit_cre_survey, name="home"),
     path('answer/',views.answer),
-    path('main/',views.main,name="main"),
+    path('main/', SurveyView.as_view(),name="main"),
     path('oauth/', include('social_django.urls', namespace='social')), # in django2
     url(r'^favicon.ico$',
         RedirectView.as_view( # the redirecting function
@@ -37,4 +38,7 @@ urlpatterns = [
     ),
     path('feedback/',views.feedback,name="feedback"),
     path('success/',views.success,name="success"),
+    url(r'^(?P<id>\d+)/', SurveyDetail.as_view(), name='survey-detail'),
+    url(r'^(?P<id>\d+)-(?P<step>\d+)/', SurveyDetail.as_view(),name='survey-detail-step'),
+    url(r'^confirm/', ConfirmView.as_view(),name='survey-confirmation'),
 ]

@@ -2,9 +2,9 @@ from django.contrib import admin
 
 from myApp.models import Survey, Question, Answer, Response
 
-class QuestionInline(admin.StackedInline):
-	model = Question
-	extra = 1
+class QuestionInline(admin.TabularInline):
+    model = Question
+    extra = 1
 
 class SurveyAdmin(admin.ModelAdmin):
 	list_display = ['name', 'description']
@@ -17,13 +17,13 @@ class AnswerBaseInline(admin.StackedInline):
     model = Answer
 
 class ResponseAdmin(admin.ModelAdmin):
-    list_display = ('survey', 'created')
+    list_display = ('survey', 'created', 'user')
     list_filter = ('survey', 'created')
     date_hierarchy = 'created'
     inlines = [AnswerBaseInline]
     # specifies the order as well as which fields to act on
     readonly_fields = (
-        'survey', 'created', 'updated'
+        'survey', 'created', 'updated','user'
     )
 
 

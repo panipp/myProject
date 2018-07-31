@@ -37,7 +37,7 @@
     <div id="content">
 
             <div class="side-menu">
-                    <div class="dropdown">
+                    <!-- <div class="dropdown">
                         <button class="btn" title="Add a question" type="button" id="dropdownMenu1" data-toggle="dropdown">
                             <i class="fa fa-plus-circle " aria-hidden="true" style="font-size: 25px;"></i>
                         </button>
@@ -52,7 +52,7 @@
                                 <a role="menuitem" tabindex="-1" href="#">คำตอบแบบสเกล</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div>
                         <button type="submit" class="btn" title="Submit"  >
                         <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 25px;"></i>
@@ -88,6 +88,7 @@
                     {% for form in formset %}
                         {% if form.instance.pk %}{{ form.DELETE }}{% endif %}
                         {% render_field form.text name="questionS" type="text" placeholder="คำถาม" %}
+                        {% render_field form.choices name="questionS" type="text" placeholder="คำตอบแบบสเกลโปรดกรองช่องนี้ เช่นต้องการ 3 choices กรอกเป็น 1,2,3" %}
                         {% render_field form.type %}
                     {% endfor %}
             </span>
